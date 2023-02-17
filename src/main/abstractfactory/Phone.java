@@ -8,6 +8,23 @@ import main.abstractcomponents.display.Display;
 import main.abstractcomponents.display.PhoneDisplay;
 
 public class Phone extends AbstractFactory{
+
+    private Phone() {}
+
+    private static Phone Phone;
+
+    private static int objectCounter = 0;
+
+    public static Phone getInstance() {
+        if(objectCounter < 2) {
+            Phone = new Phone();
+            objectCounter++;
+        }
+        else {
+            System.out.println("Error. Can't instantiate more than two!");
+        }
+        return Phone;
+    }
     @Override
     public Battery createBattery() {
         return new PhoneBattery();

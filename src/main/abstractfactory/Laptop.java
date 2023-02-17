@@ -8,6 +8,23 @@ import main.abstractcomponents.display.Display;
 import main.abstractcomponents.display.LaptopDisplay;
 
 public class Laptop extends AbstractFactory{
+
+    private Laptop() {}
+
+    private static Laptop Laptop;
+
+    private static int objectCounter = 0;
+
+    public static Laptop getInstance() {
+        if(objectCounter < 2) {
+            Laptop = new Laptop();
+            objectCounter++;
+        }
+        else {
+            System.out.println("Error. Can't instantiate more than two!");
+        }
+        return Laptop;
+    }
     @Override
     public Battery createBattery() {
         return new LaptopBattery();
