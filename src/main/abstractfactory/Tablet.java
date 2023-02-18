@@ -19,7 +19,7 @@ public class Tablet extends AbstractFactory {
         if(objectCounter < 2) {
             Tablet = new Tablet();
             objectCounter++;
-//            System.out.println("Success!");
+            System.out.println("Tablet created");
         }
         else {
             System.out.println("Error. Can't instantiate more than two!");

@@ -1,7 +1,7 @@
-phone
+Phone
 Laptop
 Laptop
 Tablet
 Laptop
-phone
+Phone
 Tablet

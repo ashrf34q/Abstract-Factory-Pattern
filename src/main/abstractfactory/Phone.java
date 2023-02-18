@@ -19,6 +19,8 @@ public class Phone extends AbstractFactory{
         if(objectCounter < 2) {
             Phone = new Phone();
             objectCounter++;
+
+            System.out.println("Phone created");
         }
         else {
             System.out.println("Error. Can't instantiate more than two!");

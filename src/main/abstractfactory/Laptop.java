@@ -19,6 +19,8 @@ public class Laptop extends AbstractFactory{
         if(objectCounter < 2) {
             Laptop = new Laptop();
             objectCounter++;
+
+            System.out.println("Laptop created");
         }
         else {
             System.out.println("Error. Can't instantiate more than two!");
